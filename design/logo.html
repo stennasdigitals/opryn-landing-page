@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opryn OS 2.0 — Premium Brand Identity System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --navy: #0D1B2A;
+      --primary-blue: #1B6CA8;
+      --accent-blue: #4f9cf9;
+      --light-blue: #7ab8fb;
+      --cream: #f0ece4;
+      --dark-bg: #0a0a0a;
+      --surface: #111;
+      --surface2: #181818;
+      --border: #222;
+      --muted: #7a7570;
+    }
+    
+    body {
+      background: var(--dark-bg);
+      color: var(--cream);
+      font-family: 'Outfit', -apple-system, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 4rem;
+      padding-top: 2rem;
+    }
+    
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.2rem;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+    
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    
+    .tagline {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--primary-blue);
+      margin-bottom: 2rem;
+    }
+    
+    section {
+      margin-bottom: 5rem;
+    }
+    
+    .section-header {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--primary-blue);
+      margin-bottom: 0.8rem;
+    }
+    
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+    }
+    
+    .section-desc {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 640px;
+      line-height: 1.8;
+    }
+    
+    /* LOGO SHOWCASE */
+    .logo-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .showcase-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    
+    .showcase-card:hover {
+      border-color: var(--primary-blue);
+      background: var(--surface2);
+    }
+    
+    .showcase-display {
+      background: var(--navy);
+      padding: 3rem 2rem;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    
+    .showcase-display.light {
+      background: var(--cream);
+    }
+    
+    .showcase-display svg {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .showcase-info {
+      padding: 2rem;
+    }
+    
+    .showcase-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      color: var(--cream);
+    }
+    
+    .showcase-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+    
+    .specs-box {
+      background: var(--dark-bg);
+      padding: 1rem;
+      border-left: 2px solid var(--primary-blue);
+      border-radius: 4px;
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+    
+    .specs-label {
+      font-weight: 600;
+      color: var(--primary-blue);
+      margin-bottom: 0.4rem;
+    }
+    
+    .specs-text {
+      color: var(--muted);
+    }
+    
+    /* SCALE DEMONSTRATION */
+    .scale-demo {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .scale-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    
+    .scale-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .scale-frame {
+      background: var(--navy);
+      border: 1px dashed var(--border);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .scale-64 { width: 80px; height: 80px; }
+    .scale-128 { width: 120px; height: 120px; }
+    .scale-256 { width: 200px; height: 200px; }
+    .scale-512 { width: 300px; height: 150px; }
+    
+    .scale-frame svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    
+    .scale-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-align: center;
+    }
+    
+    /* COLOR SYSTEM */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .color-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .color-swatch {
+      width: 100%;
+      height: 100px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .color-info {
+      padding: 1rem;
+      background: var(--surface);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    
+    .color-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+    
+    .color-code {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+    
+    .color-role {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    
+    /* USAGE GUIDELINES */
+    .guidelines {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-top: 2rem;
+    }
+    
+    .guidelines h3 {
+      font-size: 1.15rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-blue);
+      font-weight: 600;
+    }
+    
+    .guidelines h3:first-child {
+      margin-top: 0;
+    }
+    
+    .guidelines ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    
+    .guidelines li {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    
+    .guidelines li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--primary-blue);
+      font-weight: 600;
+    }
+    
+    /* CONCEPT BOX */
+    .concept {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .concept h4 {
+      font-size: 1.05rem;
+      color: var(--primary-blue);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    
+    .concept p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    
+    .concept-highlight {
+      background: var(--dark-bg);
+      padding: 1.2rem;
+      border-left: 3px solid var(--primary-blue);
+      border-radius: 4px;
+      font-style: italic;
+      color: var(--cream);
+    }
+    
+    /* TECHNICAL SPECS */
+    .tech-specs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .spec-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    
+    .spec-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--primary-blue);
+      margin-bottom: 0.6rem;
+    }
+    
+    .spec-value {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.95rem;
+      color: var(--cream);
+      font-weight: 500;
+      word-break: break-all;
+    }
+    
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding-top: 4rem;
+      border-top: 1px solid var(--border);
+      margin-top: 4rem;
+      padding-bottom: 2rem;
+    }
+    
+    .footer-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    
+    @media (max-width: 900px) {
+      .logo-showcase { grid-template-columns: 1fr; }
+      h1 { font-size: 2.4rem; }
+      .section-title { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+  <!-- HEADER -->
+  <header>
+    <div class="tagline">Premium Brand Identity</div>
+    <h1>Opryn OS 2.0</h1>
+    <p class="subtitle">Operations Reynvented — Enterprise-Grade Logo with Zero Friction</p>
+    <p class="tagline" style="margin-top: 1.5rem;">Built for Fortune 500 confidence. Designed for WhatsApp speed.</p>
+  </header>
+
+  <!-- SECTION 1: BRAND PHILOSOPHY -->
+  <section>
+    <div class="section-header">
+      <div class="section-tag">Brand Foundation</div>
+      <h2 class="section-title">The Visual Language</h2>
+      <p class="section-desc">Opryn represents the convergence of two truths: businesses need operational clarity (Fortune 500 standard), but they access their tools from WhatsApp (zero friction). The logo embodies this paradox.</p>
+    </div>
+
+    <div class="concept">
+      <h4>Core Design Principle</h4>
+      <p>The Opryn mark is built on four pillars:</p>
+      <div class="concept-highlight">
+        <strong>Precision</strong> (structured geometry suggesting data architecture)<br>
+        <strong>Clarity</strong> (negative space, alignment, hierarchy)<br>
+        <strong>Motion</strong> (upward trajectory, growth momentum)<br>
+        <strong>Synthesis</strong> (Operations + Reynvented = one unified brand)
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: PRIMARY LOGO VARIATIONS -->
+  <section>
+    <div class="section-header">
+      <div class="section-tag">Primary System</div>
+      <h2 class="section-title">Logo Variations</h2>
+      <p class="section-desc">The Opryn mark is presented in three primary variations, each optimized for different applications while maintaining visual integrity and brand recognition.</p>
+    </div>
+
+    <div class="logo-showcase">
+      <!-- Horizontal Logo -->
+      <div class="showcase-card">
+        <div class="showcase-display">
+          <svg width="380" height="120" viewBox="0 0 380 120" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="premium-grad-h" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#7ab8fb;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#1B6CA8;stop-opacity:1" />
+              </linearGradient>
+              <filter id="premium-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+                <feOffset dx="0" dy="1" result="offsetblur"/>
+                <feComponentTransfer>
+                  <feFuncA type="linear" slope="0.15"/>
+                </feComponentTransfer>
+                <feMerge>
+                  <feMergeNode/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            
+            <!-- Premium O Ring: Geometric precision -->
+            <circle cx="45" cy="60" r="38" fill="none" stroke="#1B6CA8" stroke-width="6" filter="url(#premium-shadow)"/>
+            <!-- Inner alignment ring (subtle) -->
+            <circle cx="45" cy="60" r="32" fill="none" stroke="#1B6CA8" stroke-width="1" opacity="0.3"/>
+            
+            <!-- Directional arrow: Growth momentum -->
+            <path d="M 45 25 L 45 58" stroke="url(#premium-grad-h)" stroke-width="5" stroke-linecap="round" filter="url(#premium-shadow)"/>
+            <path d="M 32 40 L 45 25 L 58 40" stroke="url(#premium-grad-h)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#premium-shadow)"/>
+            
+            <!-- Wordmark: "Opryn" -->
+            <text x="110" y="82" font-family="'Outfit', sans-serif" font-size="68" font-weight="500" fill="#f0ece4" letter-spacing="-0.8">Opryn</text>
+            
+            <!-- Subtle accent line under wordmark -->
+            <line x1="110" y1="92" x2="340" y2="92" stroke="#1B6CA8" stroke-width="2" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="showcase-info">
+          <div class="showcase-title">Horizontal Lockup</div>
+          <div class="showcase-desc">Primary logo for websites, documents, and landscape applications. Symbol and wordmark are unified in a single horizontal composition with refined spacing and subtle accent line.</div>
+          <div class="specs-box">
+            <div class="specs-label">Minimum Width: 240px</div>
+            <div class="specs-label">Preferred Use:</div>
+            <div class="specs-text">Website headers • PDF reports • Email headers • Business cards (landscape) • Social media profiles</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Icon-Only Version -->
+      <div class="showcase-card">
+        <div class="showcase-display">
+          <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="premium-grad-icon" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#7ab8fb;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#1B6CA8;stop-opacity:1" />
+              </linearGradient>
+              <filter id="premium-shadow-icon" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+                <feOffset dx="0" dy="1" result="offsetblur"/>
+                <feComponentTransfer>
+                  <feFuncA type="linear" slope="0.15"/>
+                </feComponentTransfer>
+                <feMerge>
+                  <feMergeNode/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            
+            <!-- Subtle background frame -->
+            <rect width="200" height="200" fill="#0D1B2A" rx="28"/>
+            
+            <!-- O Ring -->
+            <circle cx="100" cy="100" r="48" fill="none" stroke="#1B6CA8" stroke-width="7" filter="url(#premium-shadow-icon)"/>
+            <!-- Inner alignment circle -->
+            <circle cx="100" cy="100" r="42" fill="none" stroke="#1B6CA8" stroke-width="1" opacity="0.25"/>
+            
+            <!-- Arrow -->
+            <path d="M 100 58 L 100 96" stroke="url(#premium-grad-icon)" stroke-width="6" stroke-linecap="round" filter="url(#premium-shadow-icon)"/>
+            <path d="M 82 76 L 100 58 L 118 76" stroke="url(#premium-grad-icon)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#premium-shadow-icon)"/>
+          </svg>
+        </div>
+        <div class="showcase-info">
+          <div class="showcase-title">Icon Mark</div>
+          <div class="showcase-desc">Standalone symbol for app icons, favicons, social media avatars, and small-scale applications. The O + arrow is self-contained and maintains recognition at all sizes.</div>
+          <div class="specs-box">
+            <div class="specs-label">Minimum Size: 64px × 64px</div>
+            <div class="specs-label">Preferred Use:</div>
+            <div class="specs-text">WhatsApp DP • Favicon • App icon • Email signature (small) • Social media avatars • Badges & stickers</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Light Background Version -->
+      <div class="showcase-card">
+        <div class="showcase-display light">
+          <svg width="380" height="120" viewBox="0 0 380 120" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="premium-grad-light" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#3d8ae5;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#1B6CA8;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            
+            <circle cx="45" cy="60" r="38" fill="none" stroke="#1B6CA8" stroke-width="6"/>
+            <circle cx="45" cy="60" r="32" fill="none" stroke="#1B6CA8" stroke-width="1" opacity="0.2"/>
+            
+            <path d="M 45 25 L 45 58" stroke="url(#premium-grad-light)" stroke-width="5" stroke-linecap="round"/>
+            <path d="M 32 40 L 45 25 L 58 40" stroke="url(#premium-grad-light)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            
+            <text x="110" y="82" font-family="'Outfit', sans-serif" font-size="68" font-weight="500" fill="#0D1B2A" letter-spacing="-0.8">Opryn</text>
+            
+            <line x1="110" y1="92" x2="340" y2="92" stroke="#1B6CA8" stroke-width="2" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="showcase-info">
+          <div class="showcase-title">Light Background</div>
+          <div class="showcase-desc">Logo optimized for light and white backgrounds. Navy text maintains legibility and premium positioning. Color palette automatically adapts for print and light interfaces.</div>
+          <div class="specs-box">
+            <div class="specs-label">Minimum Width: 240px</div>
+            <div class="specs-label">Preferred Use:</div>
+            <div class="specs-text">Print materials • Light backgrounds • Packaging • Proposals • Light-theme dashboards</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: SCALE DEMONSTRATIONS -->
+  <section>
+    <div class="section-header">
+      <div class="section-tag">Technical Requirements</div>
+      <h2 class="section-title">Logo at Scale</h2>
+      <p class="section-desc">The Opryn mark maintains clarity and impact across all sizes. Each scale is carefully tested for legibility and brand presence.</p>
+    </div>
+
+    <div class="scale-demo">
+      <h3 style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--cream);">Icon Mark Scaling</h3>
+      <div class="scale-grid">
+        <div class="scale-item">
+          <div class="scale-frame scale-64">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="200" fill="#0D1B2A" rx="28"/>
+              <circle cx="100" cy="100" r="48" fill="none" stroke="#1B6CA8" stroke-width="7"/>
+              <circle cx="100" cy="100" r="42" fill="none" stroke="#1B6CA8" stroke-width="1" opacity="0.25"/>
+              <defs><linearGradient id="sg1"><stop offset="0%" style="stop-color:#7ab8fb"/><stop offset="100%" style="stop-color:#1B6CA8"/></linearGradient></defs>
+              <path d="M 100 58 L 100 96" stroke="url(#sg1)" stroke-width="6" stroke-linecap="round"/>
+              <path d="M 82 76 L 100 58 L 118 76" stroke="url(#sg1)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="scale-label">64 × 64px<br>(WhatsApp DP)</div>
+        </div>
+
+        <div class="scale-item">
+          <div class="scale-frame scale-128">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="200" fill="#0D1B2A" rx="28"/>
+              <circle cx="100" cy="100" r="48" fill="none" stroke="#1B6CA8" stroke-width="7"/>
+              <circle cx="100" cy="100" r="42" fill="none" stroke="#1B6CA8" stroke-width="1" opacity="0.25"/>
+              <defs><linearGradient id="sg2"><stop offset="0%" style="stop-color:#7ab8fb"/><stop offset="100%" style="stop-color:#1B6CA8"/></linearGradient></defs>
+              <path d="M 100 58 L 100 96" stroke="url(#sg2)" stroke-width="6" stroke-linecap="round"/>
+              <path d="M 82 76 L 100 58 L 118 76" stroke="url(#sg2)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="scale-label">128 × 128px<br>(Email signature)</div>
+        </div>
+
+        <div class="scale-item">
+          <div class="scale-frame scale-256">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="200" fill="#0D1B2A" rx="28"/>
+              <circle cx="100" cy="100" r="48" fill="none" stroke="#1B6CA8" stroke-width="7"/>
+              <circle cx="100" cy="100" r="42" fill="none" stroke="#1B6CA8" stroke-width="1" opacity="0.25"/>
+              <defs><linearGradient id="sg3"><stop offset="0%" style="stop-color:#7ab8fb"/><stop offset="100%" style="stop-color:#1B6CA8"/></linearGradient></defs>
+              <path d="M 100 58 L 100 96" stroke="url(#sg3)" stroke-width="6" stroke-linecap="round"/>
+              <path d="M 82 76 L 100 58 L 118 76" stroke="url(#sg3)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="scale-label">256 × 256px<br>(App icon)</div>
+        </div>
+
+        <div class="scale-item">
+          <div class="scale-frame scale-512">
+            <svg viewBox="0 0 380 120" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="45" cy="60" r="38" fill="none" stroke="#1B6CA8" stroke-width="6"/>
+              <circle cx="45" cy="60" r="32" fill="none" stroke="#1B6CA8" stroke-width="1" opacity="0.3"/>
+              <defs><linearGradient id="sg4"><stop offset="0%" style="stop-color:#7ab8fb"/><stop offset="100%" style="stop-color:#1B6CA8"/></linearGradient></defs>
+              <path d="M 45 25 L 45 58" stroke="url(#sg4)" stroke-width="5" stroke-linecap="round"/>
+              <path d="M 32 40 L 45 25 L 58 40" stroke="url(#sg4)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="110" y="82" font-family="'Outfit', sans-serif" font-size="68" font-weight="500" fill="#f0ece4" letter-spacing="-0.8">Opryn</text>
+            </svg>
+          </div>
+          <div class="scale-label">300 × 150px<br>(PDF header)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: COLOR SYSTEM -->
+  <section>
+    <div class="section-header">
+      <div class="section-tag">Visual System</div>
+      <h2 class="section-title">Color Palette</h2>
+      <p class="section-desc">A refined color system built for enterprise trust and WhatsApp accessibility. Each color serves a strategic purpose in the brand hierarchy.</p>
+    </div>
+
+    <div class="color-grid">
+      <div class="color-card">
+        <div class="color-swatch" style="background: #0D1B2A;"></div>
+        <div class="color-info">
+          <div class="color-name">Navy Primary</div>
+          <div class="color-code">#0D1B2A</div>
+          <div class="color-role">Foundation for stability, trust, and enterprise authority. Used for wordmark on light backgrounds and primary interface elements.</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background: #1B6CA8;"></div>
+        <div class="color-info">
+          <div class="color-name">Primary Blue</div>
+          <div class="color-code">#1B6CA8</div>
+          <div class="color-role">Core brand color for the O ring, accent elements, and interactive components. Conveys operational precision and clarity.</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background: #7ab8fb;"></div>
+        <div class="color-info">
+          <div class="color-name">Accent Blue</div>
+          <div class="color-code">#7ab8fb</div>
+          <div class="color-role">Secondary blue for gradient overlays, highlights, and growth momentum. Adds visual energy and dynamism to the system.</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background: #f0ece4;"></div>
+        <div class="color-info">
+          <div class="color-name">Cream</div>
+          <div class="color-code">#f0ece4</div>
+          <div class="color-role">Primary text color and wordmark for dark backgrounds. Soft warmth that feels approachable and human.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: TECHNICAL SPECIFICATIONS -->
+  <section>
+    <div class="section-header">
+      <div class="section-tag">Implementation Details</div>
+      <h2 class="section-title">Technical Specifications</h2>
+      <p class="section-desc">Precise specifications for consistent logo implementation across all platforms and applications.</p>
+    </div>
+
+    <div class="tech-specs">
+      <div class="spec-item">
+        <div class="spec-label">Logo Format</div>
+        <div class="spec-value">SVG (scalable vector) — Primary<br>PNG (raster) — Fallback</div>
+      </div>
+
+      <div class="spec-item">
+        <div class="spec-label">Icon Stroke Width</div>
+        <div class="spec-value">6–7px (at 200px scale)<br>Scale proportionally</div>
+      </div>
+
+      <div class="spec-item">
+        <div class="spec-label">Minimum Clear Space</div>
+        <div class="spec-value">8px around logo on all sides<br>Don't crowd with other elements</div>
+      </div>
+
+      <div class="spec-item">
+        <div class="spec-label">Wordmark Font</div>
+        <div class="spec-value">Outfit (sans-serif)<br>Weight: 500 (medium)</div>
+      </div>
+
+      <div class="spec-item">
+        <div class="spec-label">Letter Spacing</div>
+        <div class="spec-value">-0.8px (tight, modern)<br>Conveys premium positioning</div>
+      </div>
+
+      <div class="spec-item">
+        <div class="spec-label">Gradient Angle</div>
+        <div class="spec-value">Diagonal 45° (x1=0%, y1=0%)<br>to (x2=100%, y2=100%)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: USAGE GUIDELINES -->
+  <section>
+    <div class="section-header">
+      <div class="section-tag">Best Practices</div>
+      <h2 class="section-title">Brand Guidelines</h2>
+      <p class="section-desc">Comprehensive guidelines to maintain brand integrity, consistency, and impact across all customer touchpoints.</p>
+    </div>
+
+    <div class="guidelines">
+      <h3>✓ Do's — Logo Use</h3>
+      <ul>
+        <li>Always maintain proper spacing and proportion when scaling</li>
+        <li>Use the full horizontal lockup for primary branding (websites, reports)</li>
+        <li>Use the icon mark for small applications (64px+)</li>
+        <li>Apply the logo with intentional white space around it</li>
+        <li>Use the light version on light backgrounds, dark version on dark backgrounds</li>
+        <li>Preserve the navy primary color for wordmark (do not change)</li>
+        <li>Keep the O ring and arrow unified in color and meaning</li>
+        <li>Scale SVG versions for crisp rendering at all sizes</li>
+      </ul>
+
+      <h3>✗ Don'ts — Logo Misuse</h3>
+      <ul>
+        <li>Don't resize without maintaining aspect ratio</li>
+        <li>Don't change the colors without strategic justification</li>
+        <li>Don't rotate, skew, or distort the logo</li>
+        <li>Don't add drop shadows, glows, or effects unless specified</li>
+        <li>Don't separate the O ring from the wordmark in primary applications</li>
+        <li>Don't place the logo on backgrounds with insufficient contrast</li>
+        <li>Don't use the logo at sizes smaller than 64px × 64px (icon) or 240px width (lockup)</li>
+        <li>Don't create outlines or stroke variations without approval</li>
+      </ul>
+
+      <h3>Application Contexts</h3>
+      <ul>
+        <li><strong>Website Headers:</strong> Horizontal lockup, 300–400px width, positioned left-aligned in navbar</li>
+        <li><strong>PDF Reports:</strong> Horizontal lockup at top-left, 280px width, with subtle accent line</li>
+        <li><strong>Email Signatures:</strong> Icon mark, 120–128px, followed by "Opryn OS" in small text</li>
+        <li><strong>WhatsApp Profile:</strong> Icon mark, 640 × 640px (auto-scaled to 64px in DP)</li>
+        <li><strong>Social Media:</strong> Square icon mark (1:1 ratio), 512 × 512px minimum</li>
+        <li><strong>Business Cards:</strong> Horizontal lockup at top, minimum 240px width for print clarity</li>
+        <li><strong>Favicon:</strong> Icon mark, 32 × 32px (platform will auto-scale)</li>
+      </ul>
+
+      <h3>Color Application Rules</h3>
+      <ul>
+        <li>Navy (#0D1B2A) for wordmark on light backgrounds; cream (#f0ece4) on dark</li>
+        <li>Primary Blue (#1B6CA8) for O ring and accent elements on all backgrounds</li>
+        <li>Gradient (Light Blue #7ab8fb → Primary Blue #1B6CA8) for arrow and motion elements</li>
+        <li>Maintain at least 2:1 contrast ratio with background for accessibility</li>
+        <li>Never use single colors for gradient; always apply the diagonal 45° gradient for arrows</li>
+      </ul>
+
+      <h3>Spacing & Safe Area</h3>
+      <ul>
+        <li>Clear space (minimum 8px) around all sides of the logo</li>
+        <li>No other elements should intrude into the safe area</li>
+        <li>Spacing should increase with logo size (proportional to overall design)</li>
+        <li>In lockup format, maintain even spacing between icon and wordmark</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECTION 7: DESIGN RATIONALE -->
+  <section>
+    <div class="section-header">
+      <div class="section-tag">Design Philosophy</div>
+      <h2 class="section-title">Why This Design</h2>
+      <p class="section-desc">The Opryn logo is intentionally designed to bridge two worlds: Fortune 500 operational systems and WhatsApp-native accessibility. Every element serves a purpose.</p>
+    </div>
+
+    <div class="concept">
+      <h4>The O Ring: Operational Circle</h4>
+      <p>The circular O symbolizes completeness, continuity, and the cyclical nature of business operations. It's solid yet refined—no sharp edges, no aggressive geometry. It feels trustworthy and grounded.</p>
+    </div>
+
+    <div class="concept">
+      <h4>The Upward Arrow: Growth Momentum</h4>
+      <p>The arrow inside the O points upward, signifying growth, optimization, and upward trajectory. It's not floating—it's anchored within the O, meaning growth is grounded in operational excellence, not hype.</p>
+    </div>
+
+    <div class="concept">
+      <h4>The Gradient: Energy & Motion</h4>
+      <p>The diagonal gradient from light to darker blue adds visual energy and suggests data flow, intelligence in motion. It modernizes the mark without making it feel trendy or temporary. It works at 64px and at 1000px.</p>
+    </div>
+
+    <div class="concept">
+      <h4>Opryn Wordmark: Modern & Precise</h4>
+      <p>The wordmark is set in Outfit (geometric sans-serif) with tight letter spacing (-0.8px), conveying modern precision and custom craftsmanship. The navy color grounds the design in trust and enterprise authority.</p>
+    </div>
+
+    <div class="concept">
+      <h4>Dual Color Identity: Confidence & Approachability</h4>
+      <p>Navy conveys Fortune 500 stability and financial institutions' trust. Blue conveys technology, innovation, and approachability. Together, they say: "We're serious about your data, but we're not intimidating."</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-note">
+      <strong>Opryn OS 2.0 — Premium Brand Identity System</strong><br>
+      Version 1.0 | June 2026 | For internal use and implementation guidance
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
