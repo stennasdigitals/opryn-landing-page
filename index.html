@@ -38,11 +38,11 @@
 
   <main id="top">
 
-    <!-- ============================= HERO ============================= -->
+    <!-- ============================= HERO (dark, centered) ============================= -->
     <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__copy reveal">
-          <span class="eyebrow">WhatsApp-native operations</span>
+      <div class="container">
+        <div class="hero__inner reveal">
+          <span class="eyebrow eyebrow--on-dark">WhatsApp-native operations</span>
           <h1>You didn't start a business to count stock by hand every night.</h1>
           <p class="lede">Opryn runs inventory, cost of goods, purchase orders and sales approvals with the clarity of a Fortune 500 operation — entered as simply as sending a WhatsApp message. No new app. No dashboard to learn.</p>
 
@@ -50,7 +50,7 @@
             <a href="https://wa.me/2349046935946?text=Hi%20Opryn%2C%20I%27d%20like%20to%20get%20started" class="btn btn--primary" target="_blank" rel="noopener">
               Get Started on WhatsApp
             </a>
-            <a href="#whatsapp-native" class="btn btn--ghost">See how it works</a>
+            <a href="#whatsapp-native" class="btn btn--ghost-on-dark">See how it works</a>
           </div>
           <p class="hero__note">Built for retail, pharmacy, F&amp;B and wholesale distribution businesses.</p>
         </div>
@@ -71,32 +71,25 @@
               </div>
             </div>
           </div>
-          <p class="mockup-flag">Illustrative mockup — pending real product screenshots</p>
         </div>
       </div>
     </section>
 
-    <div class="wave-divider" aria-hidden="true">
-      <svg viewBox="0 0 1200 46" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,46 L0,20 L60,4 L120,20 L180,4 L240,20 L300,4 L360,20 L420,4 L480,20 L540,4 L600,20 L660,4 L720,20 L780,4 L840,20 L900,4 L960,20 L1020,4 L1080,20 L1140,4 L1200,20 L1200,46 Z" fill="#1B6CA8"/>
-      </svg>
-    </div>
-
-    <!-- ============================= VERTICALS STRIP ============================= -->
-    <section class="verticals" id="who-its-for">
+    <!-- ============================= TRUST / PROOF STRIP (light) ============================= -->
+    <section class="trust" id="who-its-for">
       <div class="container">
-        <p class="verticals__label">Built for the businesses that keep everyday commerce running</p>
-        <div class="verticals__row">
-          <span>Retail</span><span class="dot">·</span>
-          <span>Pharmacy</span><span class="dot">·</span>
-          <span>Food &amp; Beverage</span><span class="dot">·</span>
-          <span>Wholesale Distribution</span>
+        <p class="trust__label reveal">Built for the businesses that keep everyday commerce running</p>
+        <div class="trust__row reveal reveal-delay-1">
+          <span class="trust__badge">Retail</span>
+          <span class="trust__badge">Pharmacy</span>
+          <span class="trust__badge">Food &amp; Beverage</span>
+          <span class="trust__badge">Wholesale Distribution</span>
         </div>
       </div>
     </section>
 
-    <!-- ============================= ZERO DASHBOARD ============================= -->
-    <section class="split" id="whatsapp-native">
+    <!-- ============================= CORE IDEA (dark split) ============================= -->
+    <section class="split split--dark" id="whatsapp-native">
       <div class="container split__grid">
         <div class="reveal">
           <span class="eyebrow">The core idea</span>
@@ -124,25 +117,15 @@
       </div>
     </section>
 
-    <!-- ============================= BANNER ============================= -->
-    <div class="wave-divider" aria-hidden="true">
-      <svg viewBox="0 0 1200 46" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,0 L0,26 L60,42 L120,26 L180,42 L240,26 L300,42 L360,26 L420,42 L480,26 L540,42 L600,26 L660,42 L720,26 L780,42 L840,26 L900,42 L960,26 L1020,42 L1080,26 L1140,42 L1200,26 L1200,0 Z" fill="#1B6CA8"/>
-      </svg>
-    </div>
-    <section class="banner">
-      <div class="container">
+    <!-- ============================= PULL QUOTE (light) ============================= -->
+    <section class="pull-quote">
+      <div class="container reveal">
         <h2>Stop closing the shop to count stock.</h2>
         <p>End-of-day reconciliation that used to take hours now happens automatically, message by message, all day long.</p>
       </div>
     </section>
-    <div class="wave-divider" aria-hidden="true" style="transform: rotate(180deg);">
-      <svg viewBox="0 0 1200 46" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,46 L0,20 L60,4 L120,20 L180,4 L240,20 L300,4 L360,20 L420,4 L480,20 L540,4 L600,20 L660,4 L720,20 L780,4 L840,20 L900,4 L960,20 L1020,4 L1080,20 L1140,4 L1200,20 L1200,46 Z" fill="#1B6CA8"/>
-      </svg>
-    </div>
 
-    <!-- ============================= CAPABILITIES GRID ============================= -->
+    <!-- ============================= VISUAL FEATURE GRID (dark, product-UI cards) ============================= -->
     <section class="features" id="capabilities">
       <div class="container">
         <div class="features__head reveal">
@@ -152,42 +135,100 @@
         </div>
 
         <div class="feature-grid">
+          <!-- Inventory & COGS -->
           <article class="feature-card reveal">
             <div class="icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>
             </div>
             <h3>Inventory &amp; COGS, tracked automatically</h3>
             <p>Every sale and restock updates stock levels and cost of goods sold in real time — so you know your actual margin, not a guess at month-end.</p>
+            <div class="fc-mockup">
+              <div class="fc-stock-row">
+                <span class="name">Rice (50kg bags)</span>
+                <span class="meta">4 left</span>
+                <div class="fc-bar-track"><div class="fc-bar-fill" style="width: 20%;"></div></div>
+              </div>
+              <div class="fc-stock-row">
+                <span class="name">Cooking oil (5L)</span>
+                <span class="meta">6 left</span>
+                <div class="fc-bar-track"><div class="fc-bar-fill" style="width: 35%;"></div></div>
+              </div>
+              <div class="fc-stock-row">
+                <span class="name">Detergent (1kg)</span>
+                <span class="meta">28% margin</span>
+                <div class="fc-bar-track"><div class="fc-bar-fill" style="width: 60%;"></div></div>
+              </div>
+            </div>
           </article>
 
+          <!-- Demand forecasting -->
           <article class="feature-card reveal reveal-delay-1">
             <div class="icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 3 5-8"/></svg>
             </div>
             <h3>Demand forecasting that prevents empty shelves</h3>
             <p>Opryn learns your sales patterns and tells you what to reorder and when — before you're out of your best-selling items.</p>
+            <div class="fc-mockup">
+              <div class="fc-spark-head">
+                <span class="label">Next 7 days</span>
+                <span class="value">▲ 12%</span>
+              </div>
+              <svg class="fc-sparkline" viewBox="0 0 240 46" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#7ab8fb"/>
+                    <stop offset="100%" stop-color="#1B6CA8"/>
+                  </linearGradient>
+                </defs>
+                <line x1="0" y1="14" x2="240" y2="14" stroke="rgba(240,236,228,0.15)" stroke-width="1" stroke-dasharray="3 3"/>
+                <polyline points="0,40 30,36 60,38 90,28 120,30 150,20 180,22 210,10 240,8" fill="none" stroke="url(#sparkGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
           </article>
 
+          <!-- Purchase orders -->
           <article class="feature-card reveal reveal-delay-2">
             <div class="icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h5"/></svg>
             </div>
             <h3>Purchase orders, drafted and sent for you</h3>
             <p>Ask Opryn to reorder low-stock items and it drafts the purchase order, routes it to your supplier, and tracks confirmation.</p>
+            <div class="fc-mockup">
+              <div class="fc-po-head">
+                <span class="fc-po-id">PO #1042</span>
+                <span class="fc-status">Awaiting confirmation</span>
+              </div>
+              <div class="fc-po-line">Rice (50kg bags) × 20, Cooking oil (5L) × 15</div>
+              <div class="fc-po-supplier">Sent to supplier · reply expected today</div>
+            </div>
           </article>
 
+          <!-- Sales approval thresholds -->
           <article class="feature-card reveal reveal-delay-2">
             <div class="icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
             </div>
             <h3>Sales approval thresholds you control</h3>
             <p>Set limits on discounts, credit sales, or high-value transactions — staff can act fast, and you stay the one who signs off.</p>
+            <div class="fc-mockup">
+              <div class="fc-approval-row">
+                <span class="rule">Discounts over ₦5,000 require owner approval</span>
+                <span class="fc-toggle" aria-hidden="true"></span>
+              </div>
+              <div class="fc-workflow">
+                <span class="step">Staff request</span>
+                <span class="arrow">→</span>
+                <span class="step step--active">Owner approval</span>
+                <span class="arrow">→</span>
+                <span class="step">Approved</span>
+              </div>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============================= PROOF / MOCKUP ============================= -->
+    <!-- ============================= METRICS / DATA BAND (light) ============================= -->
     <section class="proof">
       <div class="container">
         <div class="proof__head reveal">
@@ -198,7 +239,10 @@
 
         <div class="device-frame reveal reveal-delay-1">
           <div class="device-frame__screen">
-            <div class="device-frame__bar"><span></span><span></span><span></span></div>
+            <div class="device-frame__bar">
+              <div class="device-frame__dots"><span></span><span></span><span></span></div>
+              <div class="device-frame__status"><span class="dot"></span> Synced from WhatsApp</div>
+            </div>
             <div class="device-frame__body">
               <div class="dash-card">
                 <span class="eyebrow">Revenue, this week</span>
@@ -221,21 +265,14 @@
             </div>
           </div>
         </div>
-        <p class="mockup-flag">Illustrative data — pending real product screenshots</p>
       </div>
     </section>
 
-    <div class="wave-divider" aria-hidden="true">
-      <svg viewBox="0 0 1200 46" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,46 L0,20 L60,4 L120,20 L180,4 L240,20 L300,4 L360,20 L420,4 L480,20 L540,4 L600,20 L660,4 L720,20 L780,4 L840,20 L900,4 L960,20 L1020,4 L1080,20 L1140,4 L1200,20 L1200,46 Z" fill="#1B6CA8"/>
-      </svg>
-    </div>
-
-    <!-- ============================= FINAL CTA ============================= -->
-    <section class="final-cta banner" id="contact">
+    <!-- ============================= CLOSING CTA (dark, glow) ============================= -->
+    <section class="final-cta" id="contact">
       <div class="container reveal">
         <h2>You've seen how it works. Now put it to work.</h2>
-        <p class="lede" style="color: rgba(240,236,228,0.85); margin: 0 auto 2rem;">Message us on WhatsApp and we'll help you get your first week of stock and sales running through Opryn.</p>
+        <p class="lede">Message us on WhatsApp and we'll help you get your first week of stock and sales running through Opryn.</p>
         <div class="hero__actions">
           <a href="https://wa.me/2349046935946?text=Hi%20Opryn%2C%20I%27d%20like%20to%20get%20started" class="btn btn--on-dark" target="_blank" rel="noopener">Chat with us on WhatsApp</a>
         </div>
@@ -280,7 +317,6 @@
           <h4>Get started</h4>
           <ul>
             <li><a href="https://wa.me/2349046935946" target="_blank" rel="noopener">WhatsApp us</a></li>
-            <!-- Placeholder — replace with real contact email when available -->
             <li><a href="mailto:stennasdigitals@gmail.com">stennasdigitals@gmail.com</a></li>
           </ul>
         </div>
